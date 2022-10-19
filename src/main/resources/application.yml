@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:h2:mem:upreadcsv;DB_CLOSE_DELAY=- 1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    initialize: 'true'
+    password: sasa
+  h2:
+    console:
+      enabled: 'true'
+  jpa:
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-request-size: 2MB
+      max-file-size: 2MB
+
+server:
+  port: '8081'
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+
+
